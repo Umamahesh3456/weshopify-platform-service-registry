@@ -39,9 +39,9 @@ pipeline{
             steps{
                 echo "Connecting to Ansible Server"
                 sshagent(['ANSIBLE_SERVER']){
-                    sh 'scp Dockerfile ansible-admin@192.168.0.4:/opt/ci-cd-files'
-                    sh 'scp weshopify-svc-registry-playbook.yml ansible-admin@192.168.0.4:/opt/ci-cd-files'
-                    sh 'scp jfrog.sh ansible-admin@192.168.0.4:/opt/ci-cd-files'
+                    sh 'cp Dockerfile ansible-admin@192.168.0.4:/opt/ci-cd-files'
+                    sh 'cp weshopify-svc-registry-playbook.yml ansible-admin@192.168.0.4:/opt/ci-cd-files'
+                    sh 'cp jfrog.sh ansible-admin@192.168.0.4:/opt/ci-cd-files'
                     sh '''
                         ssh -tt ansible-admin@192.168.0.4 << EOF
                             ansible-playbook /opt/ci-cd-files/weshopify-svc-registry-playbook.yml
