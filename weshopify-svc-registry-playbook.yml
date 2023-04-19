@@ -10,10 +10,10 @@
      shell: mkdir app-dir/target && chmod 777 app-dir/target
 
    - name: copy the jfrog file from ansible to docker
-     copy: src=/opt/ci-cd-files/jfrog.sh dest=app-dir
+     copy: src=/opt/jfrog.sh dest=app-dir
 
    - name: copy the Dockerfile Dockerserver
-     copy: src=/opt/ci-cd-files/Dockerfile dest=app-dir
+     copy: src=/opt/Dockerfile dest=app-dir
     
    - name: download the artifact from artifactory
      shell: chmod 777 ./app-dir/jfrog.sh && sh ./app-dir/jfrog.sh
