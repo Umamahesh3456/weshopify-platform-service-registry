@@ -18,7 +18,7 @@ ARTIFACTORY_ARTIFACT_NAME=weshopify-platform-services-registry
 
 ARTIFACT_VERSION_WITH_TIME_STAMP=$(curl -u $ARTIFACTORY_USER:$ARTIFACTORY_PASSWORD $ARTIFACT_META_XML_URL | grep 'value' | head -1 | sed "s/.*<value>\([^<]*\)<\/value>.*/\1/")
 echo 'ARTIFACT_VERSION_WITH_TIME_STAMP' $ARTIFACT_VERSION_WITH_TIME_STAMP
-#http://15.207.64.68:8082/artifactory
+#http://43.205.70.176:8082
 #libs-snapshot-local
 #com/durgasoft/weshopify-platform-services-registry
 #0.0.1-SNAPSHOT/
