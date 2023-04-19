@@ -44,7 +44,7 @@ pipeline{
                     sh 'scp jfrog.sh ansible-admin@192.168.0.4:/opt/'
                     sh '''
                         ssh -tt ansible-admin@192.168.0.4 << EOF
-                            ansible-playbook /opt/ci-cd-files/weshopify-svc-registry-playbook.yml
+                            ansible-playbook /opt/weshopify-svc-registry-playbook.yml
                             exit
                         EOF
                     '''
