@@ -22,13 +22,13 @@
      shell: chmod 777 ./app-dir/Dockerfile
 
    - name: build the docker image
-     shell: echo admin | sudo -S docker build -f ./app-dir/Dockerfile --tag narsimybooks/weshopify-service-registry-img .
+     shell: echo admin | sudo -S docker build -f ./app-dir/Dockerfile --tag umamahesh3/weshopify-service-registry-img .
    
    - name: push the docker image to docker hub
-     shell: echo admin | sudo -S docker push narsimybooks/weshopify-service-registry-img
+     shell: echo admin | sudo -S docker push umamahesh3/weshopify-service-registry-img
 
    - name: remove the image locally
-     shell: echo admin | sudo -S docker rmi narsimybooks/weshopify-service-registry-img
+     shell: echo admin | sudo -S docker rmi umamahesh3/weshopify-service-registry-img
    
    - name: remove the app-dir
      shell: rm -rf app-dir
